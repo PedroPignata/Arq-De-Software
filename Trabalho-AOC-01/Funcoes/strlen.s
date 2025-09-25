@@ -1,4 +1,3 @@
-# strlen.s
 .globl strlen
 .type strlen, @function
 
@@ -21,5 +20,4 @@ loop:
 end:
     # Movemos o resultado para a0, que é o registrador de retorno padrão de uma função.
     mv a0, a1
-    # Retorna da função.
     ret
