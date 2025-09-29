@@ -1,4 +1,4 @@
-.globl
+.globl strcat
 .type strcat, @function
 
 strcat:

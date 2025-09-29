@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <string.h>
+#include <stddef.h>
 
 // 1. PROTÓTIPOS DAS FUNÇÕES, extern diz ao compilador que o código está em outro lugar.
-extern int strlen(const char *s);
+extern size_t strlen(const char *s); 
 extern char *strcpy(char *dest, const char *src);
 extern int strcmp(const char *s1, const char *s2);
 extern char *strcat(char *dest, const char *src);
@@ -11,7 +12,7 @@ extern int strncmp(const char *s1, const char *s2, size_t n);
 #define BUFFER_SIZE 100
 
 int main (){
-    print(" Testes Mini BIblioteca Strin Risc-V\n");
+    printf(" Testes Mini Biblioteca Strin Risc-V\n");
 
         // 1. TESTE: strlen(const char *s)
 
@@ -25,16 +26,16 @@ int main (){
 
     printf(" Teste strcpy\n");
     char dest_cpy[BUFFER_SIZE];
-    const char *src_cpy = "Risc-V";
+    const char *src_cpy = "Risc-V Assembly";
 
     strcpy(dest_cpy, src_cpy);
 
-    printf( "String Copiada(dest): \"%s\"\n", dest_cpy);
-    printf( "Tamanho da Cópia: %d\n", strlen(dest_cpy));
+    printf(" String Copiada(dest): \"%s\"\n", dest_cpy);
+    printf(" Tamanho da Cópia: %zu (Esperado: 15)\n", strlen(dest_cpy)); 
 
     // 3. TESTE: strcmp(const char *s1, const char *s2)
 
-    printf("Teste strcmp:\n");
+    printf(" Teste strcmp:\n");
     // Declarando ponteiros de leitura que apontam para strings inicializando-o com o endereço de memoria.
     const char *s1_cmp = "apple";
     const char *s2_cmp_igual = "apple";
@@ -54,18 +55,18 @@ int main (){
 
     // 4. TESTE: strcat(char *dest, const char *src)
 
-    printf("Teste strcat:\n");
+    printf(" Teste strcat:\n");
     char dest_cat[BUFFER_SIZE] = "Hello"; // dest precisa ser inicializado e ter espaço!
     const char *src_cat = " World!";
     
     strcat(dest_cat, src_cat);
     
-    printf("   String Concatenada (dest): \"%s\"\n", dest_cat);
-    printf("   Tamanho da Concatenação: %d \n", strlen(dest_cat));
+    printf(" String Concatenada (dest): \"%s\"\n", dest_cat);
+    printf(" Tamanho da Concatenação: %zu \n", strlen(dest_cat));
 
     //5. TESTE: strncmp(const char *s1, const char *s2, size_t n)
 
-    printf("Teste strncmp:\n");
+    printf(" Teste strncmp:\n");
     const char *s1_ncmp = "abcd-efg";
     const char *s2_ncmp = "abxt-zij";
     
