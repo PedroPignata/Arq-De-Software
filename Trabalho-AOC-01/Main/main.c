@@ -20,7 +20,7 @@ int main (){
     const char *s_len = "Trabalho-AOC-01";
     int lenresult = strlen(s_len);
     printf(" String: \"%s\"\n", s_len);
-    printf(" Resultado: %d\n", lenresult);
+    printf(" Resultado: %d\n\n", lenresult);
 
     // 2. TESTE: strcpy(char *dest, const char *src)
 
@@ -31,16 +31,16 @@ int main (){
     strcpy(dest_cpy, src_cpy);
 
     printf(" String Copiada(dest): \"%s\"\n", dest_cpy);
-    printf(" Tamanho da Cópia: %zu (Esperado: 15)\n", strlen(dest_cpy)); 
+    printf(" Tamanho da Cópia: %zu (Esperado: 15)\n\n", strlen(dest_cpy)); 
 
     // 3. TESTE: strcmp(const char *s1, const char *s2)
 
     printf(" Teste strcmp:\n");
     // Declarando ponteiros de leitura que apontam para strings inicializando-o com o endereço de memoria.
-    const char *s1_cmp = "apple";
-    const char *s2_cmp_igual = "apple";
-    const char *s2_cmp_maior = "banana";
-    const char *s2_cmp_menor = "apricot";
+    const char *s1_cmp = "laranja";
+    const char *s2_cmp_igual = "laranja";
+    const char *s2_cmp_maior = "beringela";
+    const char *s2_cmp_menor = "lagarta";
     
     // Cs 1: Iguais (Retorna 0)
     printf("   Comparando \"%s\" e \"%s\": %d (Esperado: 0)\n", s1_cmp, s2_cmp_igual, strcmp(s1_cmp, s2_cmp_igual));
@@ -51,7 +51,7 @@ int main (){
 
     // Cs 3: s1 > s2 (Retorna Positivo - 'p' > 'r')
     int res_maior = strcmp(s1_cmp, s2_cmp_menor);
-    printf("   Comparando \"%s\" e \"%s\": %d (Esperado: > 0)\n", s1_cmp, s2_cmp_menor, res_maior);
+    printf("   Comparando \"%s\" e \"%s\": %d (Esperado: > 0)\n\n", s1_cmp, s2_cmp_menor, res_maior);
 
     // 4. TESTE: strcat(char *dest, const char *src)
 
@@ -62,7 +62,7 @@ int main (){
     strcat(dest_cat, src_cat);
     
     printf(" String Concatenada (dest): \"%s\"\n", dest_cat);
-    printf(" Tamanho da Concatenação: %zu \n", strlen(dest_cat));
+    printf(" Tamanho da Concatenação: %zu \n\n", strlen(dest_cat));
 
     //5. TESTE: strncmp(const char *s1, const char *s2, size_t n)
 
