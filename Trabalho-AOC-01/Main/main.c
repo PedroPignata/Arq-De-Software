@@ -12,7 +12,7 @@ extern int strncmp(const char *s1, const char *s2, size_t n);
 #define BUFFER_SIZE 100
 
 int main (){
-    printf(" Testes Mini Biblioteca Strin Risc-V\n");
+    printf(" Testes Mini Biblioteca Strin Risc-V\n\n");
 
         // 1. TESTE: strlen(const char *s)
 
