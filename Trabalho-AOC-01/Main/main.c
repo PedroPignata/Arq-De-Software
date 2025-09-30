@@ -39,7 +39,7 @@ int main (){
     // Declarando ponteiros de leitura que apontam para strings inicializando-o com o endereço de memoria.
     const char *s1_cmp = "laranja";
     const char *s2_cmp_igual = "laranja";
-    const char *s2_cmp_maior = "beringela";
+    const char *s2_cmp_maior = "morango";
     const char *s2_cmp_menor = "lagarta";
     
     // Cs 1: Iguais (Retorna 0)
