@@ -1,3 +1,4 @@
+#   Exemplo de função recursiva para calcular potência    
 #   int pot(int base, int exp) {
 #   if(exp == 0) return 1;
 #   return base * pot(base, exp - 1);
